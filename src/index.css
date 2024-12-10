@@ -112,3 +112,64 @@ textarea:focus {
 		background-color: #f9f9f9;
 	}
 }
+
+.customer-list {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  .filters {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+	margin-bottom: 24px;
+  }
+  
+  .filter-input,
+  .filter-select {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 14px;
+  }
+  
+  .filter-checkbox {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+  }
+  
+  .table-container {
+	overflow-x: auto;
+  }
+  
+  table {
+	width: 100%;
+	border-collapse: collapse;
+	background: white;
+	color:black
+  }
+  
+  th, td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+	background-color: #f5f5f5;
+	font-weight: 600;
+  }
+  
+  .highlighted {
+	background-color: #e3f2fd;
+  }
+  
+  .loading {
+	text-align: center;
+	padding: 20px;
+	color: #666;
+  }
