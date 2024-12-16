@@ -1,6 +1,5 @@
 import { useState, useEffect, useMemo, ChangeEvent } from 'react';
 import { debounce } from 'lodash';
-import dpsLogo from './assets/DPS.svg';
 import './App.css';
 
 interface Address {
@@ -21,11 +20,6 @@ interface Address {
 	skip: number;
 	limit: number;
   }
-
-  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-	const isChecked = event.target.checked;
-	// Your logic here
-  };
 
 
   
@@ -88,11 +82,6 @@ function App() {
   
 	return (
 	  <>
-		{/* <div>
-		  <a href="https://www.digitalproductschool.io/" target="_blank" rel="noreferrer">
-			<img src={dpsLogo} className="logo" alt="DPS logo" />
-		  </a>
-		</div> */}
 		<div className="home-card">
 		  <div className="customer-list">
 			{/* Filter Controls */}
@@ -115,12 +104,13 @@ function App() {
 			  </select>
 			  <label className="filter-checkbox">
 				<input
-				  type="checkbox"
-				  checked={highlightOldest}
-				  onChange={(e) => setHighlightOldest(e.checked)}
+					type="checkbox"
+					checked={highlightOldest}
+					onChange={(e) => setHighlightOldest(e.target.checked)}
 				/>
 				<span>Highlight oldest per city</span>
-			  </label>
+				</label>
+
 			</div>
   
 			{/* Users Table */}
@@ -160,7 +150,3 @@ function App() {
   }
   
   export default App;
-  
-  // App.css additions (add these to your existing App.css)
-
-  // It remains the highlight color for the oldest user per city
