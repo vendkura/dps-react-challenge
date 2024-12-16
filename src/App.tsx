@@ -1,4 +1,8 @@
-// types.ts
+import { useState, useEffect, useMemo, ChangeEvent } from 'react';
+import { debounce } from 'lodash';
+import dpsLogo from './assets/DPS.svg';
+import './App.css';
+
 interface Address {
 	city: string;
   }
@@ -17,12 +21,13 @@ interface Address {
 	skip: number;
 	limit: number;
   }
-  
-  // App.tsx
-import { useState, useEffect, useMemo, ChangeEvent } from 'react';
-import { debounce } from 'lodash';
-import dpsLogo from './assets/DPS.svg';
-import './App.css';
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+	const isChecked = event.target.checked;
+	// Your logic here
+  };
+
+
   
 function App() {
 	const [users, setUsers] = useState<User[]>([]);
@@ -83,11 +88,11 @@ function App() {
   
 	return (
 	  <>
-		<div>
+		{/* <div>
 		  <a href="https://www.digitalproductschool.io/" target="_blank" rel="noreferrer">
 			<img src={dpsLogo} className="logo" alt="DPS logo" />
 		  </a>
-		</div>
+		</div> */}
 		<div className="home-card">
 		  <div className="customer-list">
 			{/* Filter Controls */}
